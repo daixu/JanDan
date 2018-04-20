@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="second_color">#7a7a7a</color>
+    <color name="normal_text_color">#62C6B6</color>
+
+    <color name="aid_prompt_color">#FB483E</color>
+
+    <color name="colorBackground">#319bd2</color>
+
+    <color name="line_color">#d9d9d9</color>
+</resources>

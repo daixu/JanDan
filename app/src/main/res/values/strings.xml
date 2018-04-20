@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">煎蛋</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="gallery_save_file_not_have_external_storage_permission">没有外部存储权限!</string>
+
+    <string name="gallery_save_file_success">保存成功!</string>
+    <string name="gallery_save_file_failed">存储失败!</string>
+    <string name="gallery_save_file_not_have_external_storage">没有外部存储!</string>
+</resources>
