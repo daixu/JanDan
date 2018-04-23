@@ -1,4 +1,4 @@
-package com.daixu.jandan.activity;
+package com.daixu.jandan.view.main;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;

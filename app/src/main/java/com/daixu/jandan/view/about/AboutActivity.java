@@ -1,4 +1,4 @@
-package com.daixu.jandan.activity;
+package com.daixu.jandan.view.about;
 
 import android.os.Bundle;
 import android.view.View;

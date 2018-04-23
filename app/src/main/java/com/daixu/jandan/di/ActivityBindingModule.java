@@ -1,7 +1,7 @@
 package com.daixu.jandan.di;
 
-import com.daixu.jandan.activity.MainActivity;
 import com.daixu.jandan.view.duanzi.DuanziModule;
+import com.daixu.jandan.view.main.MainActivity;
 import com.daixu.jandan.view.meizi.MeiziModule;
 import com.daixu.jandan.view.news.NewsModule;
 import com.daixu.jandan.view.pic.PicModule;
