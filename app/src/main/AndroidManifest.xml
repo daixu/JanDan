@@ -19,14 +19,14 @@
             android:name="android.max_aspect"
             android:value="2.2"/>
 
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".view.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.AboutActivity"/>
+        <activity android:name=".view.about.AboutActivity"/>
         <activity android:name=".view.img.ImageDetailActivity"/>
     </application>
 
