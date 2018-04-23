@@ -1,4 +1,4 @@
-package com.daixu.jandan.net.retrofit;
+package com.daixu.jandan.net.moyu.retrofit;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,12 +12,12 @@ import timber.log.Timber;
 
 import static java.lang.String.format;
 
-public class ApiRetrofit {
+public class MoyuRetrofit {
 
     private static Retrofit retrofit;
 
-    public ApiRetrofit() {
-        String url = "http://i.jandan.net/";
+    public MoyuRetrofit() {
+        String url = "http://api.moyu.today/";
         retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .client(getOkHttpClient())

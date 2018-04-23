@@ -1,4 +1,4 @@
-package com.daixu.jandan.net.service;
+package com.daixu.jandan.net.api.service;
 
 import com.daixu.jandan.bean.NewsBean;
 import com.daixu.jandan.bean.OtherBean;

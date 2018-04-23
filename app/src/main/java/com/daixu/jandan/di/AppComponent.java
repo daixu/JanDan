@@ -3,7 +3,8 @@ package com.daixu.jandan.di;
 import android.app.Application;
 
 import com.daixu.jandan.JDApplication;
-import com.daixu.jandan.net.module.ApiServiceModule;
+import com.daixu.jandan.net.api.module.ApiServiceModule;
+import com.daixu.jandan.net.moyu.module.MoyuServiceModule;
 
 import javax.inject.Singleton;
 
@@ -18,6 +19,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         ApplicationModule.class,
         ActivityBindingModule.class,
         ApiServiceModule.class,
+        MoyuServiceModule.class,
         AndroidSupportInjectionModule.class})
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
 

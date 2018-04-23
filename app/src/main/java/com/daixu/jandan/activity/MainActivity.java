@@ -15,6 +15,7 @@ import com.daixu.jandan.view.duanzi.DuanziFragment;
 import com.daixu.jandan.view.meizi.MeiziFragment;
 import com.daixu.jandan.view.news.NewsFragment;
 import com.daixu.jandan.view.pic.PicFragment;
+import com.daixu.jandan.view.popular.PopularFragment;
 
 import javax.inject.Inject;
 
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity implements HasSupportFragmentInje
     private TabMainAdapter mTabMainAdapter;
 
     private Fragment mNewsFragment;
+    private Fragment mPopularFragment;
     private Fragment mPicFragment;
     private Fragment meiziFragment;
     private Fragment mDuanziFragment4;
@@ -51,11 +53,12 @@ public class MainActivity extends BaseActivity implements HasSupportFragmentInje
         mTabLayout = findViewById(R.id.tab_layout);
         mViewPager = findViewById(R.id.viewpager);
         mNewsFragment = new NewsFragment();
+        mPopularFragment = new PopularFragment();
         mPicFragment = new PicFragment();
         meiziFragment = new MeiziFragment();
         mDuanziFragment4 = new DuanziFragment();
-        tabNames = new String[]{"新鲜事", "无聊图", "妹子图", "段子"};
-        fragments = new Fragment[]{mNewsFragment, mPicFragment, meiziFragment, mDuanziFragment4};
+        tabNames = new String[]{"新鲜事", "流行", "无聊图", "妹子图", "段子"};
+        fragments = new Fragment[]{mNewsFragment, mPopularFragment, mPicFragment, meiziFragment, mDuanziFragment4};
         mTabMainAdapter = new TabMainAdapter(getSupportFragmentManager(), tabNames, fragments);
 
         mTabLayout.setupWithViewPager(mViewPager);

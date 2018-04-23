@@ -1,7 +1,7 @@
-package com.daixu.jandan.net.module;
+package com.daixu.jandan.net.moyu.module;
 
-import com.daixu.jandan.net.retrofit.ApiRetrofit;
-import com.daixu.jandan.net.service.ApiServer;
+import com.daixu.jandan.net.moyu.retrofit.MoyuRetrofit;
+import com.daixu.jandan.net.moyu.service.MoyuServer;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,9 +16,9 @@ import timber.log.Timber;
 import static java.lang.String.format;
 
 @Module
-public class ApiServiceModule {
+public class MoyuServiceModule {
 
-    public ApiServiceModule() {
+    public MoyuServiceModule() {
     }
 
     @Provides
@@ -54,13 +54,13 @@ public class ApiServiceModule {
 
     @Singleton
     @Provides
-    ApiServer providerApiService(ApiRetrofit retrofit) {
-        return retrofit.getRetrofit().create(ApiServer.class);
+    MoyuServer providerApiService(MoyuRetrofit retrofit) {
+        return retrofit.getRetrofit().create(MoyuServer.class);
     }
 
     @Singleton
     @Provides
-    ApiRetrofit providerApiRetrofit() {
-        return new ApiRetrofit();
+    MoyuRetrofit providerMoyuRetrofit() {
+        return new MoyuRetrofit();
     }
 }

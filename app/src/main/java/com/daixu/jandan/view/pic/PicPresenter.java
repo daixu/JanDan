@@ -3,7 +3,7 @@ package com.daixu.jandan.view.pic;
 import com.daixu.jandan.bean.OtherBean;
 import com.daixu.jandan.net.BaseSubscriber;
 import com.daixu.jandan.net.ExceptionHandle;
-import com.daixu.jandan.net.service.ApiServer;
+import com.daixu.jandan.net.api.service.ApiServer;
 import com.daixu.jandan.utils.RxUtil;
 
 import javax.inject.Inject;
