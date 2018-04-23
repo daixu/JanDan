@@ -28,21 +28,6 @@ public class MainActivity extends BaseActivity implements HasSupportFragmentInje
     @Inject
     DispatchingAndroidInjector<Fragment> supportFragmentInjector;
 
-    private TabLayout mTabLayout;
-    private ViewPager mViewPager;
-
-    private String[] tabNames;
-    private Fragment[] fragments;
-    private TabMainAdapter mTabMainAdapter;
-
-    private Fragment mNewsFragment;
-    private Fragment mPopularFragment;
-    private Fragment mPicFragment;
-    private Fragment meiziFragment;
-    private Fragment mDuanziFragment4;
-
-    private int nowCurrentItem = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AndroidInjection.inject(this);
@@ -50,21 +35,21 @@ public class MainActivity extends BaseActivity implements HasSupportFragmentInje
         setContentView(R.layout.activity_main);
 
         getToolbar("煎蛋", false);
-        mTabLayout = findViewById(R.id.tab_layout);
-        mViewPager = findViewById(R.id.viewpager);
-        mNewsFragment = new NewsFragment();
-        mPopularFragment = new PopularFragment();
-        mPicFragment = new PicFragment();
-        meiziFragment = new MeiziFragment();
-        mDuanziFragment4 = new DuanziFragment();
-        tabNames = new String[]{"新鲜事", "流行", "无聊图", "妹子图", "段子"};
-        fragments = new Fragment[]{mNewsFragment, mPopularFragment, mPicFragment, meiziFragment, mDuanziFragment4};
-        mTabMainAdapter = new TabMainAdapter(getSupportFragmentManager(), tabNames, fragments);
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        ViewPager viewPager = findViewById(R.id.viewpager);
+        Fragment newsFragment = new NewsFragment();
+        Fragment popularFragment = new PopularFragment();
+        Fragment picFragment = new PicFragment();
+        Fragment meiziFragment = new MeiziFragment();
+        Fragment duanziFragment4 = new DuanziFragment();
+        String[] tabNames = new String[]{"新鲜事", "流行", "无聊图", "妹子图", "段子"};
+        Fragment[] fragments = new Fragment[]{newsFragment, popularFragment, picFragment, meiziFragment, duanziFragment4};
+        TabMainAdapter tabMainAdapter = new TabMainAdapter(getSupportFragmentManager(), tabNames, fragments);
 
-        mTabLayout.setupWithViewPager(mViewPager);
-        mViewPager.setAdapter(mTabMainAdapter);
-        mViewPager.setOffscreenPageLimit(tabNames.length);
-        mViewPager.setCurrentItem(nowCurrentItem);
+        tabLayout.setupWithViewPager(viewPager);
+        viewPager.setAdapter(tabMainAdapter);
+        viewPager.setOffscreenPageLimit(tabNames.length);
+        viewPager.setCurrentItem(0);
     }
 
     @Override
